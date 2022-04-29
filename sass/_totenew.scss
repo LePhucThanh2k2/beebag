@@ -1,0 +1,121 @@
+.tote {
+  &-new {
+    margin: 1.5rem 0 5.6rem 0;
+  }
+  &-new__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-new__content {
+    width: 60%;
+    height: 100%;
+  }
+  &-new--title {
+    font-weight: bold;
+    color: $text-color;
+    font-size: 44px;
+    line-height: 72px;
+    max-width: 53rem;
+  }
+  &-new--desc {
+    font-family: $font-secondary;
+    line-height: 2.4rem;
+    color: $text-color;
+    max-width: 60rem;
+  }
+  &-new--information {
+    margin-top: 5.5rem;
+    width: 65.4rem;
+    background-color: #fff;
+    box-shadow: $box-shadow-color-card;
+    border-radius: 1.5rem;
+    padding: 3.2rem 4rem;
+    position: relative;
+    &::before {
+      content: "";
+      width: 26.56px;
+      height: 126.75px;
+      background-color: #fcd4d4;
+      position: absolute;
+      left: 1rem;
+      top: -3rem;
+      transform: rotate(45deg);
+      opacity: 0.9;
+    }
+  }
+  &-new__list {
+    margin-bottom: 2.3rem;
+    font-family: $font-secondary;
+    font-weight: 500;
+  }
+  &-new__item {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 0 1.4rem;
+    margin-bottom: 1.6rem;
+  }
+
+  &-new__text {
+    font-family: $font-secondary;
+    line-height: 2.4rem;
+    font-weight: 400;
+  }
+  &-new__link {
+    margin-top: 6px;
+    display: inline-block;
+    background-color: $primary-color;
+    padding: 10px 29px;
+    border-radius: 1rem;
+    font-weight: bold;
+    color: $text-color;
+  }
+  &-new--img {
+    width: 53rem;
+    height: 56rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 50% 50%;
+  }
+  &-new__person {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+  &-new__person-last {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+  &-new--circle__image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(8%, -4%);
+    z-index: 1;
+  }
+  &-new--circle {
+    bottom: 0;
+    left: 0;
+    width: 50rem;
+    height: 50rem;
+    transform: translate(2%, 2%);
+    position: absolute;
+    background: linear-gradient(to bottom, #fece1fc9, #f6eed176);
+    border-radius: 50%;
+    z-index: 1;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .tote-new {
+    &__container {
+      flex-direction: column-reverse;
+      gap: 32px 0;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.promise {
+  margin: 102px 0 130px 0;
+  &-container {
+    position: relative;
+  }
+  &-image {
+    position: relative;
+  }
+  &-title {
+    font-weight: bold;
+    font-size: 48px;
+    color: #000000;
+    width: 53rem;
+    line-height: 7.2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &-desc {
+    width: 39rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    &__one,
+    &__two,
+    &__three {
+      font-weight: 400;
+      font-family: $font-secondary;
+      color: #000000;
+      line-height: 2.4rem;
+      margin-bottom: 1rem;
+    }
+  }
+  &-person {
+    position: relative;
+    margin: 0 auto;
+  }
+  &-city {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: -1;
+  }
+  &-leaf__primary {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  &-leaf__secondary {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-53%, -65%);
+    z-index: -2;
+  }
+  &-street {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-100%, 100%);
+    z-index: -1;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .promise {
+    padding: 0 5rem;
+    &-image {
+      margin-bottom: 13rem;
+    }
+    &-desc {
+      position: relative;
+      width: 100%;
+    }
+    &-title {
+      width: 100%;
+      position: relative;
+    }
+  }
+}
