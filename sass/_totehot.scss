@@ -133,6 +133,7 @@
 }
 @media screen and (max-width: 1279px) {
   .tote-hot {
+    padding: 0 5rem;
     &--desc {
       width: 100%;
     }
@@ -140,6 +141,14 @@
 }
 @media screen and (max-width: 767px) {
   .tote-hot {
+    margin-bottom: 2rem;
+    padding: 0 1.5rem;
+    &--title {
+      font-size: 24px;
+    }
+    &--list {
+      height: 36rem;
+    }
     &--item {
       border: 0px;
       &:hover {
