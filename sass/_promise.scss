@@ -80,3 +80,29 @@
     }
   }
 }
+@media screen and (max-width: 1023px) {
+  .promise {
+    &-person {
+      height: 407px;
+      width: 130px;
+    }
+    &-leaf__primary,
+    &-leaf__secondary {
+      height: 27rem;
+      width: 204px;
+    }
+  }
+}
+@media screen and(max-width:767px) {
+  .promise {
+    &-city {
+      height: 64%;
+      object-fit: cover;
+      object-position: center;
+    }
+    &-title {
+      font-size: 24px;
+      line-height: 3.6rem;
+    }
+  }
+}

@@ -114,8 +114,50 @@
 @media screen and (max-width: 1279px) {
   .tote-new {
     &__container {
+      padding: 0 5rem;
+      padding: 0 5rem;
       flex-direction: column-reverse;
       gap: 32px 0;
+    }
+  }
+}
+@media screen and (max-width: 1023px) {
+  .tote-new {
+    &--img {
+      width: 37rem;
+      height: 37rem;
+    }
+    &__person,
+    &__person-last {
+      width: 15rem;
+      height: 30rem;
+    }
+    &--circle {
+      width: 30rem;
+      height: 30rem;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      &__image {
+        width: 30rem;
+        height: 30rem;
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-42%, 0);
+      }
+    }
+  }
+}
+@media screen and(max-width:767px) {
+  .tote-new {
+    &--title {
+      font-size: 24px;
+      line-height: 36px;
+    }
+    &--information {
+      width: 100%;
     }
   }
 }

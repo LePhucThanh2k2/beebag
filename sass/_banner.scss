@@ -95,3 +95,31 @@
     padding: 0 5rem;
   }
 }
+@media screen and (max-width: 1022px) {
+  .banner {
+    &-container {
+      height: 30rem;
+      &::before {
+        height: 80%;
+      }
+    }
+    &-list {
+      height: 24rem;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .banner {
+    padding: 0 0.5rem;
+    &-container {
+      height: 20rem;
+    }
+    &-list {
+      height: 16rem;
+    }
+    &-navigation__input {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+}

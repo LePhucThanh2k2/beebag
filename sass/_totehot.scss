@@ -2,7 +2,7 @@
   &-hot {
     margin-bottom: 13rem;
   }
-  &-hot--titlte {
+  &-hot--title {
     font-weight: bold;
     font-size: 48px;
     line-height: 72px;
@@ -16,36 +16,46 @@
   }
   &-hot--list {
     display: flex;
-    justify-content: space-between;
-    align-items: stretch;
+    height: 46rem;
+    gap: 0 30px;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   &-hot--item {
+    flex-shrink: 0;
+    cursor: pointer;
     position: relative;
-    width: 27rem;
-    height: 40rem;
-  }
-  &-hot--box {
-    width: 27rem;
-    height: 40rem;
-    background-color: #fff;
-    padding: 2.4rem;
-    border-radius: 1rem;
-    border: 4px solid transparent;
+    width: 28.5rem;
+    height: 39.7rem;
     overflow: hidden;
     transition: all 0.2s linear;
+    border-radius: 1rem;
+    border: 4px solid transparent;
+
     &:hover {
       overflow: visible;
-      height: auto;
+      height: 46rem;
       border: 4px solid $primary-color;
     }
-    &:hover + .tote-hot--box__after {
+    &:hover > .tote-hot--box__after {
       top: -1.2rem;
       right: -1.2rem;
       height: 46rem;
     }
   }
+  &-hot--box {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 2.4rem;
+    border-radius: 1rem;
+  }
   &-hot--buy {
-    margin-top: 2rem;
+    margin: 2rem auto 0;
+    width: 100%;
+    text-align: center;
     font-weight: bold;
     padding: 1.4rem 7rem;
     background-color: $primary-color;
@@ -112,10 +122,9 @@
   &-hot--box__after {
     position: absolute;
     background: url(../image/box-after.png) no-repeat center center / cover;
-
     top: 0rem;
     right: 0rem;
-    width: 80%;
+    width: 100%;
     height: 100%;
     z-index: -1;
     border-radius: 1.2rem;
@@ -123,20 +132,44 @@
   }
 }
 @media screen and (max-width: 1279px) {
-  .tote {
-    &-hot {
-      padding: 5rem;
+  .tote-hot {
+    &--desc {
+      width: 100%;
     }
-    &-hot--list {
-      overflow-x: auto;
-      gap: 0 26px;
-      height: 48rem;
-      &::-webkit-scrollbar {
-        display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .tote-hot {
+    &--item {
+      border: 0px;
+      &:hover {
+        border: 0px;
       }
     }
-    &-hot--desc {
-      width: 100%;
+    &--box {
+      padding: 0.2rem;
+    }
+    &--image {
+      width: 144px;
+      height: 144px;
+    }
+    &--item {
+      width: 14.4rem;
+      height: 30rem;
+      &:hover {
+        overflow: visible;
+        height: 36rem;
+      }
+      &:hover > .tote-hot--box__after {
+        top: -1.2rem;
+        right: -1.2rem;
+        height: 36rem;
+      }
+    }
+    &--buy {
+      padding: 1rem 1.5rem;
+      width: 90%;
+      margin-left: 0.5rem;
     }
   }
 }

@@ -186,6 +186,11 @@ body {
     display: block;
   }
 }
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 0 1rem;
+  }
+}
 .banner {
   margin-top: 10rem;
 }
@@ -289,6 +294,32 @@ body {
     padding: 0 5rem;
   }
 }
+@media screen and (max-width: 1022px) {
+  .banner-container {
+    height: 30rem;
+  }
+  .banner-container::before {
+    height: 80%;
+  }
+  .banner-list {
+    height: 24rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .banner {
+    padding: 0 0.5rem;
+  }
+  .banner-container {
+    height: 20rem;
+  }
+  .banner-list {
+    height: 16rem;
+  }
+  .banner-navigation__input {
+    width: 1rem;
+    height: 1rem;
+  }
+}
 .promise {
   margin: 102px 0 130px 0;
 }
@@ -368,6 +399,27 @@ body {
   .promise-title {
     width: 100%;
     position: relative;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .promise-person {
+    height: 407px;
+    width: 130px;
+  }
+  .promise-leaf__primary, .promise-leaf__secondary {
+    height: 27rem;
+    width: 204px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .promise-city {
+    height: 64%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .promise-title {
+    font-size: 24px;
+    line-height: 3.6rem;
   }
 }
 .tote-new {
@@ -483,14 +535,51 @@ body {
 
 @media screen and (max-width: 1279px) {
   .tote-new__container {
+    padding: 0 5rem;
+    padding: 0 5rem;
     flex-direction: column-reverse;
     gap: 32px 0;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .tote-new--img {
+    width: 37rem;
+    height: 37rem;
+  }
+  .tote-new__person, .tote-new__person-last {
+    width: 15rem;
+    height: 30rem;
+  }
+  .tote-new--circle {
+    width: 30rem;
+    height: 30rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .tote-new--circle__image {
+    width: 30rem;
+    height: 30rem;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-42%, 0);
+  }
+}
+@media screen and (max-width: 767px) {
+  .tote-new--title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .tote-new--information {
+    width: 100%;
   }
 }
 .tote-hot {
   margin-bottom: 13rem;
 }
-.tote-hot--titlte {
+.tote-hot--title {
   font-weight: bold;
   font-size: 48px;
   line-height: 72px;
@@ -504,36 +593,45 @@ body {
 }
 .tote-hot--list {
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
+  height: 46rem;
+  gap: 0 30px;
+  overflow-x: auto;
+}
+.tote-hot--list::-webkit-scrollbar {
+  display: none;
 }
 .tote-hot--item {
+  flex-shrink: 0;
+  cursor: pointer;
   position: relative;
-  width: 27rem;
-  height: 40rem;
-}
-.tote-hot--box {
-  width: 27rem;
-  height: 40rem;
-  background-color: #fff;
-  padding: 2.4rem;
-  border-radius: 1rem;
-  border: 4px solid transparent;
+  width: 28.5rem;
+  height: 39.7rem;
   overflow: hidden;
   transition: all 0.2s linear;
+  border-radius: 1rem;
+  border: 4px solid transparent;
 }
-.tote-hot--box:hover {
+.tote-hot--item:hover {
   overflow: visible;
-  height: auto;
+  height: 46rem;
   border: 4px solid #ffc800;
 }
-.tote-hot--box:hover + .tote-hot--box__after {
+.tote-hot--item:hover > .tote-hot--box__after {
   top: -1.2rem;
   right: -1.2rem;
   height: 46rem;
 }
+.tote-hot--box {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 2.4rem;
+  border-radius: 1rem;
+}
 .tote-hot--buy {
-  margin-top: 2rem;
+  margin: 2rem auto 0;
+  width: 100%;
+  text-align: center;
   font-weight: bold;
   padding: 1.4rem 7rem;
   background-color: #ffc800;
@@ -599,7 +697,7 @@ body {
   background: url(../image/box-after.png) no-repeat center center/cover;
   top: 0rem;
   right: 0rem;
-  width: 80%;
+  width: 100%;
   height: 100%;
   z-index: -1;
   border-radius: 1.2rem;
@@ -607,19 +705,41 @@ body {
 }
 
 @media screen and (max-width: 1279px) {
-  .tote-hot {
-    padding: 5rem;
-  }
-  .tote-hot--list {
-    overflow-x: auto;
-    gap: 0 26px;
-    height: 48rem;
-  }
-  .tote-hot--list::-webkit-scrollbar {
-    display: none;
-  }
   .tote-hot--desc {
     width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .tote-hot--item {
+    border: 0px;
+  }
+  .tote-hot--item:hover {
+    border: 0px;
+  }
+  .tote-hot--box {
+    padding: 0.2rem;
+  }
+  .tote-hot--image {
+    width: 144px;
+    height: 144px;
+  }
+  .tote-hot--item {
+    width: 14.4rem;
+    height: 30rem;
+  }
+  .tote-hot--item:hover {
+    overflow: visible;
+    height: 36rem;
+  }
+  .tote-hot--item:hover > .tote-hot--box__after {
+    top: -1.2rem;
+    right: -1.2rem;
+    height: 36rem;
+  }
+  .tote-hot--buy {
+    padding: 1rem 1.5rem;
+    width: 90%;
+    margin-left: 0.5rem;
   }
 }
 .assess {
@@ -721,6 +841,28 @@ body {
     transform: rotate(90deg);
   }
 }
+@media screen and (max-width: 1023px) {
+  .assess-cart {
+    width: 40rem;
+    height: 50rem;
+    object-fit: fit;
+  }
+}
+@media screen and (max-width: 767px) {
+  .assess-cart {
+    width: 30rem;
+    height: 36rem;
+  }
+  .assess-container {
+    padding: 2.4rem;
+  }
+  .assess--title {
+    font-size: 24px;
+  }
+  .assess-feature__image {
+    width: 100%;
+  }
+}
 .instagram-content {
   width: 100%;
   display: flex;
@@ -793,6 +935,24 @@ body {
   display: inline-block;
 }
 
+@media screen and (max-width: 1023px) {
+  .instagram-item {
+    min-width: 20rem;
+    height: 20rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .instagram-title {
+    font-size: 24px;
+  }
+  .instagram-desc {
+    width: 100%;
+  }
+  .instagram-item {
+    min-width: 14.7rem;
+    height: 14.7rem;
+  }
+}
 .footer {
   width: 100%;
   margin-top: 84px;
@@ -837,6 +997,33 @@ body {
 @media screen and (max-width: 1279px) {
   .footer {
     padding: 0 3rem;
+  }
+  .footer-content__link {
+    padding-right: 5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer-container {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .footer-content__link {
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+  .footer-social {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 0 16px;
   }
 }
 

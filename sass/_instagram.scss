@@ -71,9 +71,25 @@
     display: inline-block;
   }
 }
-.fa {
-  &-brands {
+@media screen and(max-width:1023px) {
+  .instagram {
+    &-item {
+      min-width: 20rem;
+      height: 20rem;
+    }
   }
-  &-instagram {
+}
+@media screen and(max-width:767px) {
+  .instagram {
+    &-title {
+      font-size: 24px;
+    }
+    &-desc {
+      width: 100%;
+    }
+    &-item {
+      min-width: 14.7rem;
+      height: 14.7rem;
+    }
   }
 }

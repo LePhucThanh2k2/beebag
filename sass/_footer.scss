@@ -41,5 +41,36 @@
 @media screen and(max-width:1279px) {
   .footer {
     padding: 0 3rem;
+    &-content {
+      &__link {
+        padding-right: 5rem;
+      }
+    }
+  }
+}
+@media screen and(max-width:767px) {
+  .footer {
+    &-container {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    &-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      width: 100%;
+      &__link {
+        padding-right: 0;
+        padding-bottom: 20px;
+      }
+    }
+    &-social {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      width: 100%;
+      gap: 0 16px;
+    }
   }
 }
